@@ -7,7 +7,7 @@ const AppDataSource = new DataSource({
   port: 5432,
   username: "postgres",
   password: "Sofya2002",
-  database: "finam-customers",
+  database: "finam",
   synchronize: true,
   logging: true,
   entities: [Customer],
@@ -16,3 +16,4 @@ const AppDataSource = new DataSource({
 });
 
 export default AppDataSource;
+
