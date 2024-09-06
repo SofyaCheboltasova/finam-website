@@ -1,0 +1,33 @@
+@import '../../styles/consts.scss';
+
+.button {
+	display: inline-block;
+	padding: 20px;
+
+	border-radius: 20px;
+
+	color: $color-secondary;
+	background-color: transparent;
+	outline: 2px solid $color-secondary;
+
+	font-size: 1.6rem;
+
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+
+	&:hover {
+		background-color: $color-secondary;
+		color: $color-main;
+	}
+}
+
+.button_filled {
+	color: $color-main;
+	background-color: $color-secondary;
+
+	&:hover {
+		color: $color-secondary;
+		background-color: transparent;
+	}
+}
