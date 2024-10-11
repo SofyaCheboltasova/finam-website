@@ -21,8 +21,7 @@ export default function Page(props: PageProps) {
         </div>
       </div>
 
-      <div className={style.page__content}>{children}</div>
+      {children}
     </section>
   );
 }
-

@@ -1,9 +1,9 @@
 @import '../../styles/consts.scss';
 
 .page {
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
-	padding: 3rem;
+	padding: 5rem 3rem;
 
 	border-radius: 20px;
 }
