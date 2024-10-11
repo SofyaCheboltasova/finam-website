@@ -14,7 +14,11 @@ export default function WelcomePage() {
           </p>
         </div>
         <div className={style.content__buttons}>
-          <Button text={"Открыть счет"} filled />
+          <Button
+            text={"Открыть счет онлайн"}
+            filled
+            href="https://www.finam.ru/landing/otkrytie-scheta-new/?AgencyBAckofficeID=4%C2%A0425&amp;agent=2a48d454-1dae-%204115-885d-1f33a37d363d"
+          />
           <Button text={"Узнать больше"} />
         </div>
       </div>
@@ -23,4 +27,3 @@ export default function WelcomePage() {
     </section>
   );
 }
-
