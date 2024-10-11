@@ -1,0 +1,66 @@
+@import '../../styles/consts.scss';
+@import '../../styles/mixins.scss';
+
+.block {
+	@include flex(column, 4rem, space-between);
+	color: $color-secondary;
+	background-color: $color-main;
+	border-radius: 20px;
+
+	width: 100%;
+	padding: 2rem 6rem 6rem;
+	// position: relative;
+	// left: -100px;
+}
+
+.block__header {
+	@include flex(column, 2rem, $align-items: center);
+}
+
+.logo {
+	display: block;
+	margin: 0 auto;
+	max-height: 90px;
+}
+
+.subheader {
+	font: $font-subheader;
+	font-size: 2rem;
+	text-align: center;
+
+	position: relative;
+	width: fit-content;
+	padding: 1rem;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+		width: 100%;
+		opacity: 0.7;
+		color: $color-highlight;
+		border: 0.1px solid $color-highlight;
+	}
+}
+
+.list {
+	@include flex(column, 1.2rem, space-between);
+	position: relative;
+	opacity: 0.9;
+}
+
+.item {
+	font: $font-small;
+	font-weight: 300;
+
+	padding-left: 35px;
+	list-style-type: none;
+
+	&::before {
+		content: '→';
+		color: $color-highlight;
+		position: absolute;
+		left: 0;
+	}
+}
