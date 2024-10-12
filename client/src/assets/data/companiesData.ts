@@ -1,7 +1,7 @@
 export const companies = [
   {
     id: 1,
-    logo: "/images/open_logo.svg",
+    logo: "/images/logos/open_logo.svg",
     year: "2012 - 2023гг.",
     description:
       "«Открытие брокер» — один из лидеров в сегменте брокерского обслуживания в России.",
@@ -15,7 +15,7 @@ export const companies = [
   },
   {
     id: 2,
-    logo: "/images/finam_logo.svg",
+    logo: "/images/logos/finam_logo.svg",
     year: "Текущий партнер",
     description: "Финам — ведущий брокер на фондовом и товарном рынках.",
     points: [
@@ -29,7 +29,7 @@ export const companies = [
   },
   {
     id: 3,
-    logo: "/images/bcs_logo.svg",
+    logo: "/images/logos/bcs_logo.svg",
     year: "Текущий партнер",
     description:
       "БКС — лидер на российском брокерском рынке по размеру оборотов.",
