@@ -11,6 +11,7 @@
 
 	opacity: 0;
 	transform: translateY(15rem);
+
 }
 
 .page.visible {
@@ -80,7 +81,7 @@
 
 .sticky {
 	position: sticky;
-	top: 0;
+	top: 8vh;
 	height: 100vh;
 	overflow: hidden;
 }
@@ -89,7 +90,7 @@
 	overflow: hidden;
 	position: absolute;
 	overflow: hidden;
-	top: 20rem;
+	top: calc(8vh + 15rem);
 	will-change: transform;
 	transition: transform 0.2s ease;
 
