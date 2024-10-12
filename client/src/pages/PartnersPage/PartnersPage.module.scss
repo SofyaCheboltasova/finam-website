@@ -1,8 +1,9 @@
-.partners {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 6rem;
+@import '../../styles/consts.scss';
+@import '../../styles/mixins.scss';
 
+.partners {
+	@include flex(column, 6rem, space-between);
+
+	position: relative;
 	margin-top: 4rem;
 }

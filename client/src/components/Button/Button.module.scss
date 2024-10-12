@@ -1,24 +1,26 @@
 @import '../../styles/consts.scss';
+@import '../../styles/mixins.scss';
 
 .button {
-	display: inline-block;
+	@include flex($justify-content: center, $align-items: center);
 	padding: 20px;
 
-	border-radius: 20px;
+	border-radius: $border-radius;
 
 	color: $color-secondary;
-	background-color: transparent;
+	background-color: $color-main;
 	outline: 2px solid $color-secondary;
 
 	font-size: 1.6rem;
 
-	text-decoration: none;
 	width: 100%;
 	text-align: center;
+	text-decoration: none;
 
 	&:hover {
 		background-color: $color-secondary;
 		color: $color-main;
+		outline: 2px solid $color-main;
 	}
 }
 
