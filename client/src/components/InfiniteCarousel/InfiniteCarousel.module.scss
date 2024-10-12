@@ -1,0 +1,43 @@
+.carousel {
+	margin: 0 auto;
+	padding: 4rem 0;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+
+	>* {
+		flex: 0 0 100%;
+	}
+
+	&:hover .group {
+		animation-play-state: paused;
+	}
+}
+
+.group {
+	display: flex;
+	gap: 4rem;
+	will-change: transform;
+	animation: scrolling 60s linear infinite;
+	padding-right: 4rem;
+}
+
+.card {
+	transition: transform 0.3s ease-in-out;
+	width: 60vw;
+
+	&:hover {
+		transform: scale(1.03);
+	}
+}
+
+
+@keyframes scrolling {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}
