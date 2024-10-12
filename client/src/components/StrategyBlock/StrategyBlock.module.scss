@@ -1,0 +1,64 @@
+@import '../../styles/consts.scss';
+@import '../../styles/mixins.scss';
+
+.block {
+	@include flex(column, 2rem, space-between);
+
+	display: grid;
+	grid-template-rows: 7rem 10rem auto auto;
+	gap: 3rem 3rem;
+
+	justify-content: space-between;
+
+	border-radius: $border-radius;
+
+	color: $color-main;
+	background-color: $color-secondary;
+
+	width: 50rem;
+	height: 100%;
+	padding: 4rem 4rem 2rem;
+	position: relative;
+
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	transform: scale(1);
+
+	&:hover {
+		transform: scale(0.99)
+	}
+}
+
+.header {
+	@include flex(column, 1rem);
+}
+
+.header__name {
+	font-weight: 600;
+}
+
+.header__description {
+	font: $font-small;
+	font-size: 1.6rem;
+	color: $color-transparent;
+}
+
+.content {
+	@include flex(column, 1rem, space-between);
+}
+
+.content__info {
+	@include flex($justify-content: space-between);
+
+	span:first-child {
+		color: $color-transparent;
+	}
+}
+
+.image {
+	object-fit: contain;
+	position: relative;
+	width: 100%;
+	left: 0;
+
+}

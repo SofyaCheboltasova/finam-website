@@ -5,12 +5,9 @@
 	@include flex(column, 4rem, space-between);
 	color: $color-secondary;
 	background-color: $color-main;
-	border-radius: 20px;
-
+	border-radius: $border-radius;
 	width: 100%;
 	padding: 2rem 6rem 6rem;
-	// position: relative;
-	// left: -100px;
 }
 
 .block__header {
@@ -62,5 +59,23 @@
 		color: $color-highlight;
 		position: absolute;
 		left: 0;
+	}
+}
+
+.floating {
+	animation: float 3s ease-in-out;
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-5rem);
+	}
+
+	100% {
+		transform: translateY(0);
 	}
 }

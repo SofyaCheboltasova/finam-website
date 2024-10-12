@@ -1,4 +1,4 @@
-import style from "./InfoBlock.module.scss";
+import style from "./CompanyBlock.module.scss";
 
 interface CompanyData {
   id: number;
@@ -8,15 +8,15 @@ interface CompanyData {
   points: string[];
 }
 
-interface InfoBlockProps {
+interface CompanyBlockProps {
   data: CompanyData;
 }
 
-export function InfoBlock({ data }: InfoBlockProps) {
+export function CompanyBlock({ data }: CompanyBlockProps) {
   const { logo, description, points } = data;
 
   return (
-    <article className={style.block}>
+    <article className={`${style.block} ${style.floating}`}>
       <div className={style.block__header}>
         <img src={logo} alt="Logo" className={style.logo} />
         <div className={style.subheader}>{description}</div>
