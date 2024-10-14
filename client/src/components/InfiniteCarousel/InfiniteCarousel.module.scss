@@ -12,6 +12,11 @@
 	&:hover .group {
 		animation-play-state: paused;
 	}
+
+	background-image: url(/public/images/backgrounds/dark_background.png);
+	background-size: contain;
+	background-repeat: repeat-x;
+	background-position: left;
 }
 
 .group {
