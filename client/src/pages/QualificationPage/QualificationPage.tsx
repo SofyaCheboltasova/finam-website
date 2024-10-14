@@ -19,7 +19,7 @@ export default function QualificationPage() {
   }
 
   return (
-    <Page header={header} subheader={subheader} color={"white"}>
+    <Page id="#team" header={header} subheader={subheader} color={"white"}>
       <div className={style.images}>
         <div className={style.team}>
           <img

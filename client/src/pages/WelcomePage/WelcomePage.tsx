@@ -3,7 +3,7 @@ import style from "./WelcomePage.module.scss";
 
 export default function WelcomePage() {
   return (
-    <section className={style.page}>
+    <section className={style.page} id="/">
       <div className={style.content}>
         <div className={style.content__text}>
           <h1>РАЦИОНАЛЬНЫЙ ПОДХОД К ИНВЕСТИЦИЯМ</h1>

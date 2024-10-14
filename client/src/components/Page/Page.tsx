@@ -5,6 +5,7 @@ import { useVerticalScroll } from "../../hooks/useVerticalScroll";
 import { useHorizontalScroll } from "../../hooks/useHorizontalScroll";
 
 interface PageProps {
+  id: string;
   header: string;
   subheader: string;
   color: "white" | "black";
@@ -13,7 +14,7 @@ interface PageProps {
 }
 
 export default function Page(props: PageProps) {
-  const { header, subheader, color, scrollType, children } = props;
+  const { id, header, subheader, color, scrollType, children } = props;
 
   const pageRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -23,6 +24,7 @@ export default function Page(props: PageProps) {
 
   return (
     <section
+      id={id}
       ref={pageRef}
       className={`${style.page} ${style[color]} ${
         scrollType && style.stickyWrapper
