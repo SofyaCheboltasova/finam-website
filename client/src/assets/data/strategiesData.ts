@@ -48,7 +48,7 @@ export const strategies: strategyType[] = [
     name: "НЗТ активная",
     description:
       "Основная идея стратегии — поиск недооцененных бумаг на Российском рынке, а также спекулятивная торговля в более короткие промежутки времени под корпоративные истории",
-    link: "https://www.comon.ru/strategies/16451/?AgencyBAckofficeID=4%20425&agent=2a48d454-1dae-4115-885d-1f33a37d363d",
+    link: "https://www.comon.ru/strategies/16451/?AgencyBAckofficeID=4425&agent=a48d454-1dae-4115-885d-1f33a37d363d",
     minSum: 200000,
     risk: "Умеренный",
     profit: 49,
@@ -59,7 +59,7 @@ export const strategies: strategyType[] = [
     name: "Валютная",
     description:
       "Стратегия «Валютная» стала лучше адаптироваться к текущей ситуации на валютном рынке.",
-    link: "https://www.comon.ru/strategies/11564/?AgencyBAckofficeID=4%20425&agent=2a48d454-1dae-4115-885d-1f33a37d363d",
+    link: "https://www.comon.ru/strategies/11564/?AgencyBAckofficeID=4425&agent=a48d454-1dae-4115-885d-1f33a37d363d",
     minSum: 200000,
     risk: "Умеренный",
     profit: 33,
@@ -70,7 +70,7 @@ export const strategies: strategyType[] = [
     name: "Krot",
     description:
       "В торговле используются высоколиквидные волатильные акции и фьючерсы Российского фондового рынка.",
-    link: "https://www.comon.ru/strategies/108010/?AgencyBAckofficeID=4%20425&agent=2a48d454-1dae-4115-885d-1f33a37d363d",
+    link: "https://www.comon.ru/strategies/108010/?AgencyBAckofficeID=4425&agent=a48d454-1dae-4115-885d-1f33a37d363d",
     minSum: 95000,
     risk: "Умеренный",
     profit: 37,
@@ -81,7 +81,7 @@ export const strategies: strategyType[] = [
     name: "Хедж-Фонд (Hedge Fund online)",
     description:
       "Инвестиционная стратегия хедж-фонда предполагает активное управление, базирующееся на принципах максимизации доходности, долгосрочного инвестирования, диверсификации и эффективного риск-менеджмента.",
-    link: "https://www.comon.ru/strategies/119204/?AgencyBAckofficeID=4%20425&agent=2a48d454-1dae-4115-885d-1f33a37d363d",
+    link: "https://www.comon.ru/strategies/119204/?AgencyBAckofficeID=4425&agent=a48d454-1dae-4115-885d-1f33a37d363d",
     minSum: 200000,
     risk: "Агрессивный",
     profit: 156,
@@ -92,7 +92,7 @@ export const strategies: strategyType[] = [
     name: "Арбитражная стратегия на российском рынке",
     description:
       "Данная стратегия представляет собой набор арбитражных механизмов,  на срочной и фондовой секций Московской бирже.",
-    link: "https://www.comon.ru/strategies/118916/?AgencyBAckofficeID=4%20425&agent=2a48d454-1dae-4115-885d-1f33a37d363d",
+    link: "https://www.comon.ru/strategies/118916/?AgencyBAckofficeID=4425&agent=a48d454-1dae-4115-885d-1f33a37d363d",
     minSum: 290000,
     risk: "Агрессивный",
     profit: 109,
@@ -103,7 +103,7 @@ export const strategies: strategyType[] = [
     name: "Росток+",
     description:
       "Торговля осуществляется только на срочном рынке с применением технического анализа, вручную.",
-    link: "https://www.comon.ru/strategies/110116/?AgencyBAckofficeID=4%20425&agent=2a48d454-1dae-4115-885d-1f33a37d363d",
+    link: "https://www.comon.ru/strategies/110116/?AgencyBAckofficeID=4425&agent=a48d454-1dae-4115-885d-1f33a37d363d",
     minSum: 400000,
     risk: "Агрессивный",
     profit: 147,
