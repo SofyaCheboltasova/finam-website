@@ -1,9 +1,9 @@
 .carousel {
 	margin: 0 auto;
-	padding: 4rem 0;
 	width: 100%;
 	overflow: hidden;
 	display: flex;
+	justify-content: center;
 
 	>* {
 		flex: 0 0 100%;
@@ -18,16 +18,15 @@
 	display: flex;
 	gap: 4rem;
 	will-change: transform;
-	animation: scrolling 60s linear infinite;
+	animation: scrolling 40s linear infinite;
 	padding-right: 4rem;
 }
 
 .card {
 	transition: transform 0.3s ease-in-out;
-	width: 60vw;
 
 	&:hover {
-		transform: scale(1.03);
+		transform: scale(0.98);
 	}
 }
 
