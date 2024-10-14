@@ -1,0 +1,71 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/consts.scss';
+
+.footer {
+	@include flex(column, 5rem, space-between);
+	width: 100%;
+	margin-bottom: 7rem;
+}
+
+.footer__content {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 5rem
+}
+
+.content__contacts {
+	@include flex(column, 5rem);
+}
+
+.contacts__socials {
+	@include flex(column, 1rem);
+
+	a:hover {
+		color: $color-transparent;
+	}
+}
+
+.contacts__info {
+	@include flex(column, 1rem);
+}
+
+.lightText {
+	color: $color-transparent;
+	font-size: 1.6rem;
+}
+
+.social {
+	@include flex(row, 1rem, $align-items: center, $text-align: justify);
+
+	* {
+		font-weight: 300;
+		font-size: 1.8rem;
+	}
+
+	img {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+.content__geo {
+	@include flex(column, 2rem, $justify-content: space-evenly);
+}
+
+.geo__map {
+	border-radius: 20px;
+}
+
+.geo__links {
+	@include flex(row, 1rem, $justify-content: space-evenly);
+	list-style-type: none;
+
+	a {
+		color: $color-transparent;
+		font-size: 1.6rem;
+	}
+
+	a:hover {
+		color: $color-secondary;
+	}
+}
