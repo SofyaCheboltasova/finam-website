@@ -8,7 +8,7 @@ export default function StrategiesPage() {
 
   return (
     <Page
-      id="#products"
+      id="products"
       color={"black"}
       header={header}
       subheader={subheader}
