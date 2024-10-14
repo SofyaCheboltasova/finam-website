@@ -7,7 +7,12 @@ export default function StrategiesPage() {
   const subheader = "Получайте высокую доходность с проверенными стратегиями";
 
   return (
-    <Page header={header} subheader={subheader} color={"black"} sticky>
+    <Page
+      color={"black"}
+      header={header}
+      subheader={subheader}
+      scrollType="horizontal"
+    >
       {strategies.map((strategy) => {
         return <StrategyBlock data={strategy} />;
       })}
