@@ -20,7 +20,7 @@ export const contacts = [
   {
     id: 4,
     logo: "/images/contacts/mail.png",
-    href: "mailto:enisey49@gmail.com",
-    name: "enisey49@gmail.com",
+    href: "mailto:kcheboltasov@reg.finam.ru",
+    name: "kcheboltasov@reg.finam.ru",
   },
 ];
