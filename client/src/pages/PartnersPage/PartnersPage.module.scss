@@ -2,8 +2,39 @@
 @import '../../styles/mixins.scss';
 
 .partners {
-	@include flex(column, 6rem, space-between);
+	// display: grid;
+	// grid-template-columns: 2fr 1fr;
+	// gap: 5rem;
 
+	@include flex(column, 7rem);
 	position: relative;
-	margin-top: 4rem;
+	margin-top: 7rem;
+	transition: height 0.3s ease-out;
+}
+
+.description {
+	border-radius: 20px;
+	background-color: $color-main2;
+	padding: 4rem;
+	@include flex(column, 4rem);
+
+	background-image: url('images/backgrounds/dark_background.png');
+	background-size: cover;
+}
+
+.points {
+	@include flex(column, 1rem, space-between);
+	color: $color-secondary2
+}
+
+.point {
+	display: flex;
+	margin-bottom: 1.6rem;
+	font-size: 2rem;
+
+	&::before {
+		content: "—";
+		flex-shrink: 0;
+		margin-right: 8px;
+	}
 }
