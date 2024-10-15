@@ -2,13 +2,9 @@
 @import '../../styles/mixins.scss';
 
 .partners {
-	// display: grid;
-	// grid-template-columns: 2fr 1fr;
-	// gap: 5rem;
-
-	@include flex(column, 7rem);
+	@include flex(column, 3rem);
 	position: relative;
-	margin-top: 7rem;
+	margin-top: 5rem;
 	transition: height 0.3s ease-out;
 }
 

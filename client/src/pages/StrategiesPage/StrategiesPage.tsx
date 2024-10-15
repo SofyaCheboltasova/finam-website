@@ -9,7 +9,7 @@ export default function StrategiesPage() {
   return (
     <Page
       id="products"
-      color={"black"}
+      color={"white"}
       header={header}
       subheader={subheader}
       scrollType="horizontal"

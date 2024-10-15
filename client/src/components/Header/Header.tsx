@@ -10,9 +10,9 @@ export function Header() {
 
       <nav className={style.navigation}>
         <a href="#partners">Партнеры</a>
-        <a href="#products">Стратегии</a>
         <a href="#team">Квалификация</a>
         <a href="#cases">Кейсы</a>
+        <a href="#products">Стратегии</a>
         <a href="#contacts">Контакты</a>
       </nav>
     </header>

@@ -23,7 +23,7 @@ export default function PartnersPage() {
   }
 
   return (
-    <Page id={`partners`} header={header} subheader={subheader} color={"white"}>
+    <Page id={`partners`} header={header} subheader={subheader} color={"black"}>
       <div className={style.partners}>
         {getCarousel()}
         <ul className={style.description}>
