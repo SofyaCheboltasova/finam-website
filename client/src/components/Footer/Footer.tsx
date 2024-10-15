@@ -47,9 +47,7 @@ export function Footer() {
 
         <div className={style.content__geo}>
           <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A653c9c339cb069088a97d4901ca17f65133456642e628b082031e9a1d586d46e&amp;source=constructor"
-            width="100%"
-            height="400"
+            src="https://yandex.ru/map-widget/v1/?display-text=%D0%A4%D0%B8%D0%BD%D0%B0%D0%BC&ll=91.434150%2C53.727167&mode=search&oid=26693914081&ol=biz&sll=91.434150%2C53.727167&sspn=0.012875%2C0.009047&text=%7B%22text%22%3A%22%D0%A4%D0%B8%D0%BD%D0%B0%D0%BC%22%2C%22what%22%3A%5B%7B%22attr_name%22%3A%22chain_id%22%2C%22attr_values%22%3A%5B%22252701201%22%5D%7D%5D%7D&z=16"
             className={style.geo__map}
           ></iframe>
           <ul className={style.geo__links}>
