@@ -1,34 +1,31 @@
 .carousel {
-	margin: 0 auto;
-	width: 100%;
+	// margin: 0 auto;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
-
-	>* {
-		flex: 0 0 100%;
-	}
+	position: relative;
 
 	&:hover .group {
 		animation-play-state: paused;
 	}
-
-	background-image: url(/public/images/backgrounds/dark_background.png);
-	background-size: contain;
-	background-repeat: repeat-x;
-	background-position: left;
 }
 
 .group {
 	display: flex;
 	gap: 4rem;
+	align-items: center;
 	will-change: transform;
-	animation: scrolling 40s linear infinite;
-	padding-right: 4rem;
+	animation: scroll 20s linear infinite;
+	display: flex;
+	width: calc(36rem * 9);
+	// padding-right: 4rem;
 }
 
 .card {
 	transition: transform 0.3s ease-in-out;
+	width: 36rem;
+	display: flex;
+	justify-content: center;
 
 	&:hover {
 		transform: scale(0.98);
@@ -36,12 +33,12 @@
 }
 
 
-@keyframes scrolling {
+@keyframes scroll {
 	0% {
 		transform: translateX(0);
 	}
 
 	100% {
-		transform: translateX(-100%);
+		transform: translateX(calc(-36rem * 3));
 	}
 }

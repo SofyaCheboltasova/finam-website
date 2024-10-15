@@ -8,13 +8,26 @@ export function InfiniteCarousel({ items }: InfiniteCarouselProps) {
   return (
     <div className={style.carousel}>
       <div className={style.group}>
-        {items.map((item) => {
-          return <div className={style.card}>{item}</div>;
+        {items.map((item, index) => {
+          return (
+            <div className={style.card} key={`item${index}`}>
+              {item}
+            </div>
+          );
         })}
-      </div>
-      <div aria-hidden className={style.group}>
-        {items.map((item) => {
-          return <div className={style.card}>{item}</div>;
+        {items.map((item, index) => {
+          return (
+            <div className={style.card} key={`item-hidden${index}`}>
+              {item}
+            </div>
+          );
+        })}
+        {items.map((item, index) => {
+          return (
+            <div className={style.card} key={`item-hidden${index}`}>
+              {item}
+            </div>
+          );
         })}
       </div>
     </div>
