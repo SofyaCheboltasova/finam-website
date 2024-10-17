@@ -20,7 +20,6 @@ export default function WelcomePage() {
             filled
             href={`https://www.finam.ru/landing/otkrytie-scheta-new/${id}`}
           />
-          <Button text={"Узнать больше"} />
         </div>
       </div>
 
