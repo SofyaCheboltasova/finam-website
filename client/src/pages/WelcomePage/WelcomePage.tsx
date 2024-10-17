@@ -1,5 +1,6 @@
 import Button from "../../components/Button/Button";
 import style from "./WelcomePage.module.scss";
+import { id } from "../../assets/data/strategiesData";
 
 export default function WelcomePage() {
   return (
@@ -17,7 +18,7 @@ export default function WelcomePage() {
           <Button
             text={"Открыть счет онлайн"}
             filled
-            href="https://www.finam.ru/landing/otkrytie-scheta-new/?AgencyBAckofficeID=4425&agent=a48d454-1dae-4115-885d-1f33a37d363d"
+            href={`https://www.finam.ru/landing/otkrytie-scheta-new/${id}`}
           />
           <Button text={"Узнать больше"} />
         </div>

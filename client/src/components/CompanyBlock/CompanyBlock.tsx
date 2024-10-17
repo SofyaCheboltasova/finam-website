@@ -22,17 +22,15 @@ export function CompanyBlock({ data }: CompanyBlockProps) {
         <div className={style.subheader}>{description}</div>
       </div>
 
-      <div className={style.block__content}>
-        <ul className={style.list}>
-          {points.map((point) => {
-            return (
-              <li key={point} className={style.item}>
-                {point}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <ul className={style.list}>
+        {points.map((point) => {
+          return (
+            <li key={point} className={style.item}>
+              {point}
+            </li>
+          );
+        })}
+      </ul>
     </article>
   );
 }
