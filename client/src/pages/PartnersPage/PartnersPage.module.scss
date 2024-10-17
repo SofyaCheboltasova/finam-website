@@ -13,9 +13,6 @@
 	background-color: $color-main2;
 	padding: 4rem;
 	@include flex(column, 4rem);
-
-	background-image: url('images/backgrounds/dark_background.png');
-	background-size: cover;
 }
 
 .points {
