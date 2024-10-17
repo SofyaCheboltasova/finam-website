@@ -10,10 +10,20 @@ import WelcomePage from "./pages/WelcomePage/WelcomePage";
 function App() {
   return (
     <div className={style.app}>
+      <img
+        src="images/backgrounds/dark_background.png"
+        alt=""
+        className={style.app__img}
+      />
       <Header />
       <WelcomePage />
       <PartnersPage />
       <QualificationPage />
+      <img
+        src="images/backgrounds/dark_background-flipped.png"
+        alt=""
+        className={style.app__img_flipped}
+      />
       <CasesPage />
       <StrategiesPage />
       {/* <Form/> */}
