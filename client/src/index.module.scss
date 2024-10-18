@@ -50,12 +50,38 @@ h4 {
 p,
 span,
 div,
-a {
-	font-size: 2rem;
+a,
+li {
+	font: $font-small;
 	line-height: 1.3;
 }
 
 a {
 	color: $color-secondary;
 	text-decoration: none;
+}
+
+@media (max-width: 860px) {
+
+	h1,
+	h2 {
+		font: $font-header-860px
+	}
+
+	h3 {
+		font: $font-h3-860px;
+	}
+
+	h4 {
+		font: $font-h4-860px;
+	}
+
+	p,
+	span,
+	div,
+	a,
+	li {
+		font: $font-small-860px;
+	}
+
 }

@@ -4,6 +4,7 @@
 	min-height: 100vh;
 	width: 100%;
 	padding: 3rem;
+	margin-bottom: 5rem;
 	border-radius: $border-radius;
 
 	will-change: opacity, transform;
@@ -66,7 +67,6 @@
 
 .black {
 	background-color: transparent;
-	// background-color: $color-main;
 	color: $color-secondary;
 
 	.header {
@@ -86,21 +86,22 @@
 
 .sticky {
 	position: sticky;
-	top: 1vh;
+	top: 3vh;
 	height: 100vh;
 	overflow: hidden;
+
 }
 
 .hScroll {
 	overflow: hidden;
 	position: absolute;
 	overflow: hidden;
-	top: calc(6vh + 15rem);
 	will-change: transform;
 	transition: transform 0.2s ease;
 
 	display: flex;
 	gap: 5rem;
-	padding-left: 2rem;
+	padding-left: 50vw;
+	width: max-content;
 	align-items: center;
 }

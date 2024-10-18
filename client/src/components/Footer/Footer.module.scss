@@ -31,16 +31,10 @@
 
 .lightText {
 	color: $color-transparent;
-	font-size: 1.6rem;
 }
 
 .social {
 	@include flex(row, 1rem, $align-items: center, $text-align: justify);
-
-	* {
-		font-weight: 300;
-		font-size: 1.8rem;
-	}
 
 	img {
 		width: 2rem;

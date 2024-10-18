@@ -3,15 +3,13 @@
 
 .button {
 	@include flex($justify-content: center, $align-items: center);
-	padding: 20px 10px;
+	padding: 2rem 1rem;
 
 	border-radius: $border-radius;
 
 	color: $color-secondary;
 	background-color: $color-main;
 	outline: 2px solid $color-secondary;
-
-	font-size: 1.5rem;
 
 	width: 100%;
 	text-align: center;
@@ -21,6 +19,7 @@
 
 	&:hover {
 		color: $color-main;
+		cursor: pointer;
 		outline: 2px solid $color-main;
 		background-color: $color-secondary;
 	}
@@ -35,4 +34,12 @@
 		background-color: $color-main;
 		outline: 2px solid $color-secondary;
 	}
+}
+
+@media (max-width: 860px) {
+	.button {
+		padding: 1rem;
+		outline: 1px solid $color-secondary;
+	}
+
 }

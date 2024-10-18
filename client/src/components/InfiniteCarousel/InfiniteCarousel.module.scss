@@ -1,5 +1,6 @@
+$card-width: 36rem;
+
 .carousel {
-	// margin: 0 auto;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -17,13 +18,12 @@
 	will-change: transform;
 	animation: scroll 20s linear infinite;
 	display: flex;
-	width: calc(36rem * 9);
-	// padding-right: 4rem;
+	width: calc($card-width * 9);
 }
 
 .card {
 	transition: transform 0.3s ease-in-out;
-	width: 36rem;
+	width: $card-width;
 	display: flex;
 	justify-content: center;
 
@@ -41,4 +41,27 @@
 	100% {
 		transform: translateX(calc(-36rem * 3));
 	}
+}
+
+@media (max-width: 860px) {
+	$card-width: 25rem;
+
+	.card {
+		width: $card-width;
+	}
+
+	.group {
+		width: calc($card-width * 9);
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(calc(-25rem * 3));
+		}
+	}
+
 }

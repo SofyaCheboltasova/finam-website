@@ -24,7 +24,6 @@
 
 	box-shadow: 0.1em 0em 1em rgb(0 0 0 / 42%);
 	z-index: 10;
-
 }
 
 .img__square {
@@ -39,4 +38,25 @@
 	object-fit: contain;
 	border-radius: 20px;
 	padding: 1rem 0;
+}
+
+@media (max-width: 860px) {
+	.images {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.team {
+		flex-direction: row;
+	}
+
+	.img__square {
+		width: 15rem;
+		height: 15rem;
+	}
+
+	.image__rect {
+		height: 50vh;
+	}
 }

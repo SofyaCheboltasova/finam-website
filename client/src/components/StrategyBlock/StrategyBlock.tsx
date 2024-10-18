@@ -15,9 +15,7 @@ export function StrategyBlock({ data }: StrategyBlockProps) {
 
   return (
     <article className={style.block} key={id} onClick={handleClick}>
-      <div className={style.header}>
-        <h4 className={style.header__name}>{name}</h4>
-      </div>
+      <h4 className={style.header}>{name}</h4>
 
       <div className={style.content}>
         <div className={style.content__info}>
