@@ -34,3 +34,27 @@
 	height: 80vh;
 	background-size: cover;
 }
+
+@media only screen and (max-width: 767px) {
+	.content {
+		align-items: center;
+		text-align: center;
+	}
+
+	.image {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.page {
+		padding: unset;
+		padding-top: 15svh;
+		align-items: unset;
+	}
+
+	.content {
+		align-items: unset;
+	}
+
+}

@@ -45,7 +45,7 @@
 }
 
 .content__info {
-	@include flex($justify-content: space-between);
+	@include flex(row, 1rem, space-between, center);
 
 	span:first-child {
 		color: $color-transparent;

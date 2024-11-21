@@ -12,16 +12,18 @@ export function Header() {
 
   return (
     <header className={style.header}>
-      <img src="/images/logos/citadel_logo.svg" alt="Logo" />
+      <div className={style.header_top}>
+        <img src="/images/logos/citadel_logo.svg" alt="Logo" />
 
-      <div className={style.burger} onClick={toggleMenu}>
-        <span className={menuOpen ? style.burgerOpen : ""}></span>
-        <span className={menuOpen ? style.burgerOpen : ""}></span>
-        <span className={menuOpen ? style.burgerOpen : ""}></span>
+        <div className={style.burger} onClick={toggleMenu}>
+          <span className={menuOpen ? style.burgerOpen : ""}></span>
+          <span className={menuOpen ? style.burgerOpen : ""}></span>
+          <span className={menuOpen ? style.burgerOpen : ""}></span>
+        </div>
       </div>
 
       <nav
-        className={`${style.navigation} ${menuOpen ? style.open : ""}`}
+        className={`${style.header_nav} ${menuOpen ? style.open : ""}`}
         onClick={toggleMenu}
       >
         <a href="#partners">Партнеры</a>

@@ -83,5 +83,12 @@ a {
 	li {
 		font: $font-small-860px;
 	}
+}
 
+@media only screen and (max-width: 640px) {
+
+	h1,
+	h2 {
+		font: $font-header-640px
+	}
 }
