@@ -18,6 +18,7 @@ export default function QualificationPage() {
     return <InfiniteCarousel items={items} />;
   }
 
+  // TDOD: замазать данные паспорта
   return (
     <Page id="team" header={header} subheader={subheader} color={"white"}>
       <div className={style.images}>

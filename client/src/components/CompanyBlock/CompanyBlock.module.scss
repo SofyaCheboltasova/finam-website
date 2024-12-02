@@ -1,66 +1,44 @@
-@import '../../styles/consts.scss';
-@import '../../styles/mixins.scss';
+@import "../../styles/consts.scss";
+@import "../../styles/mixins.scss";
 
 .block {
-	@include flex(column, 4rem);
-	color: $color-secondary;
-	background-color: $color-main;
-	border-radius: $border-radius;
-	width: 100%;
-	height: 50vh;
-	padding: 2rem 6rem 6rem;
+  @include flex(column, 3rem);
+  color: $color-secondary;
+  background: linear-gradient(120deg, #060606, #2d2d308a);
+  border-radius: $border-radius;
+  width: 100%;
+  padding: 3rem 5rem 5rem;
 }
 
-
 .block__header {
-	@include flex(column, 2rem, $align-items: center);
+  @include flex(column, 2rem, center);
+  height: 10%;
 }
 
 .logo {
-	display: block;
-	margin: 0 auto;
-	max-height: 90px;
-}
-
-.subheader {
-	font: $font-subheader;
-	font-size: 2rem;
-	text-align: center;
-
-	position: relative;
-	width: fit-content;
-	padding: 1rem;
-
-	&::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		bottom: -10px;
-		width: 100%;
-		opacity: 0.7;
-		color: $color-highlight;
-		border: 0.1px solid $color-highlight;
-	}
+  display: block;
+  margin: 0 auto;
+  max-height: 90px;
 }
 
 .list {
-	@include flex(column, 1.2rem, space-between);
-	position: relative;
-	opacity: 0.9;
-	height: 100%;
+  @include flex(column, 1.2rem);
+  position: relative;
+  opacity: 0.9;
+  height: 100%;
 }
 
 .item {
-	font: $font-small;
-	font-weight: 300;
+  font: $font-small;
+  font-weight: 300;
 
-	padding-left: 35px;
-	list-style-type: none;
+  padding-left: 35px;
+  list-style-type: none;
 
-	&::before {
-		content: '→';
-		color: $color-highlight;
-		position: absolute;
-		left: 0;
-	}
+  &::before {
+    content: "—";
+    color: $color-secondary2;
+    position: absolute;
+    left: 0;
+  }
 }

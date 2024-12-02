@@ -1,12 +1,13 @@
 import style from "./PartnersPage.module.scss";
 import Page from "../../components/Page/Page";
-import { companies, points } from "../../assets/data/companiesData";
+import { companies } from "../../assets/data/companiesData";
 import { InfiniteCarousel } from "../../components/InfiniteCarousel/InfiniteCarousel";
+import { CompanyBlock } from "../../components/CompanyBlock/CompanyBlock";
 
 export default function PartnersPage() {
   const header = "НАШИ ПАРТНЕРЫ";
   const subheader =
-    "С 2012 года Цитадель-Инвест является официальным представительством ведущих инвестиционных компаний";
+    "С 2012 года Цитадель-Инвест является официальным представительством в Хакасии ведущих инвестиционных компаний";
 
   function getCarousel() {
     const items: React.ReactNode[] = [];
@@ -25,15 +26,28 @@ export default function PartnersPage() {
   return (
     <Page id={`partners`} header={header} subheader={subheader} color={"black"}>
       <div className={style.partners}>
-        {getCarousel()}
+        {/* {getCarousel()} */}
         <ul className={style.description}>
-          <h3>В рамках сотрудничества мы предоставляем:</h3>
+          {companies.map((company) => {
+            return <CompanyBlock data={company} />;
+          })}
 
-          <div className={style.points}>
-            {points.map((point) => {
-              return <li className={style.point}>{point}</li>;
-            })}
-          </div>
+          {/* <div className={style.points_column}>
+              <h4>Для физических лиц:</h4>
+              <div className={style.points}>
+                {points.map((point) => {
+                  return <li className={style.point}>{point}</li>;
+                })}
+              </div>
+            </div>
+            <div className={style.points_column}>
+            <h4>Для юридических лиц:</h4>
+              <div className={style.points}>
+                {points.map((point) => {
+                  return <li className={style.point}>{point}</li>;
+                })}
+              </div>
+            </div> */}
         </ul>
       </div>
     </Page>

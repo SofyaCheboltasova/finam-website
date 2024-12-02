@@ -24,8 +24,9 @@ function App() {
         alt=""
         className={style.app__img_flipped}
       />
-      <CasesPage />
+      {/*<CasesPage />*/}
       <StrategiesPage />
+        <CasesPage />
       {/* <Form/> */}
       <Footer />
     </div>

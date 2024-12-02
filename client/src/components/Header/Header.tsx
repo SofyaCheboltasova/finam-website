@@ -28,8 +28,8 @@ export function Header() {
       >
         <a href="#partners">Партнеры</a>
         <a href="#team">Квалификация</a>
-        <a href="#cases">Кейсы</a>
-        <a href="#products">Стратегии</a>
+        <a href="#products">Физ.лицам</a>
+        <a href="#cases">Юр.лицам</a>
         <a href="#contacts">Контакты</a>
       </nav>
     </header>

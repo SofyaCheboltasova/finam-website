@@ -1,0 +1,53 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/consts.scss';
+
+.block {
+  @include flex(column, 6rem, space-between);
+  padding: 5rem ;
+
+  margin: 0 auto;
+
+  color: $color-main;
+  background-color: $color-secondary2;
+  border-radius: $border-radius;
+
+  background-image: url(/public/images/backgrounds/light_background.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.points {
+  @include flex(column, 2rem, space-between);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem 6rem;
+  position: relative;
+}
+
+.header {
+  font-weight: 500;
+  font-family: Merriweather, sans-serif;
+}
+
+.point {
+  //width: 50%;
+  //padding-left: 35px;
+  @include flex(column, 1rem);
+  text-align: left;
+}
+
+//.point:nth-child(2n) {
+//  align-self: end;
+//}
+
+//.point::before {
+//    content: "—";
+//    color: $color-main2;
+//    position: absolute;
+//    left: 0;
+//}
+
+.description {
+  color: $color-main2;
+}

@@ -1,0 +1,61 @@
+@import '../../styles/consts.scss';
+@import '../../styles/mixins.scss';
+
+.block {
+  @include flex(column, 3rem, space-between);
+  height: 100%;
+  padding: 2rem;
+  border-radius: $border-radius;
+
+  color: $color-main;
+  background-color: $color-secondary;
+
+  background-image: url(/public/images/backgrounds/light_background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(0.99)
+  }
+}
+
+.header {
+  @include flex(column, 1rem);
+}
+
+.header {
+  font-weight: 600;
+  display: block;
+  height: 5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  max-height: calc(1.2em * 2);
+}
+
+.content {
+  @include flex(column, 1rem);
+}
+
+.content__info {
+  @include flex(row, 1rem, space-between, center);
+
+  span:first-child {
+    color: $color-transparent;
+  }
+}
+
+.image {
+  object-fit: contain;
+  position: relative;
+  width: 100%;
+  left: 0;
+  border-radius: 20px;
+}

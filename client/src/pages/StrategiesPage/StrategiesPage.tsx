@@ -6,8 +6,8 @@ import { StrategyBlock } from "../../components/StrategyBlock/StrategyBlock";
 import style from "./StrategiesPage.module.scss";
 
 export default function StrategiesPage() {
-  const header = "ГОТОВЫЕ СТРАТЕГИИ";
-  const subheader = "Получайте высокую доходность с проверенными стратегиями";
+  const header = "ФИЗИЧЕСКИМ ЛИЦАМ";
+  const subheader = "Получайте высокую доходность с проверенными стратегиями автоследования";
   const risks = new Map<number, string>();
   risks.set(1, "Консервативный");
   risks.set(2, "Умеренный");

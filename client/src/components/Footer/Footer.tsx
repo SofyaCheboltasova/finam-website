@@ -27,7 +27,7 @@ export function Footer() {
           <ul className={style.contacts__info}>
             <li className={style.social}>
               <img src="images/contacts/location.png" alt="" />
-              <span>Колхозная, дом 34, офис 2 этаж</span>
+              <span>г Абакан, ул Колхозная, д 34, 109Н офис; 2 этаж</span>
             </li>
 
             <li className={style.social}>

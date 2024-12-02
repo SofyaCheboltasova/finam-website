@@ -2,10 +2,8 @@ import style from "./CompanyBlock.module.scss";
 
 interface CompanyData {
   id: number;
-  logo: string;
-  year: string;
-  description: string;
   points: string[];
+  logo?: string;
 }
 
 interface CompanyBlockProps {
@@ -13,19 +11,19 @@ interface CompanyBlockProps {
 }
 
 export function CompanyBlock({ data }: CompanyBlockProps) {
-  const { logo, description, points } = data;
+  const { id, logo, points } = data;
 
   return (
     <article className={`${style.block} ${style.floating}`}>
       <div className={style.block__header}>
         <img src={logo} alt="Logo" className={style.logo} />
-        <div className={style.subheader}>{description}</div>
+        {/* <div className={style.subheader}>{description}</div> */}
       </div>
 
       <ul className={style.list}>
         {points.map((point) => {
           return (
-            <li key={point} className={style.item}>
+            <li key={id} className={style.item}>
               {point}
             </li>
           );

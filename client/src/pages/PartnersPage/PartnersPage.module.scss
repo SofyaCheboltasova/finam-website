@@ -2,22 +2,33 @@
 @import '../../styles/mixins.scss';
 
 .partners {
-	@include flex(column, 3rem);
+	@include flex(column, 8rem);
 	position: relative;
 	margin-top: 5rem;
 	transition: height 0.3s ease-out;
 }
 
 .description {
+	@include flex(column, 4rem);
+}
+
+.points__block {
+	@include flex(row, 8rem, space-evenly);
+	align-self: flex-start;
+}
+
+.points_column {
 	border-radius: 20px;
 	background-color: $color-main2;
 	padding: 4rem;
-	@include flex(column, 4rem);
+	@include flex(column, 4rem, space-between);
+	width: 40%;
 }
 
 .points {
 	@include flex(column, 1rem, space-between);
-	color: $color-secondary2
+	color: $color-secondary2;
+
 }
 
 .point {
