@@ -3,7 +3,7 @@ import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { UrCustomersPage } from "./pages/UrCustomersPage/UrCustomersPage.tsx";
 import PartnersPage from "./pages/PartnersPage/PartnersPage";
-import QualificationPage from "./pages/QualificationPage/QualificationPage";
+import TeamPage from "./pages/TeamPage/TeamPage.tsx";
 import StrategiesPage from "./pages/StrategiesPage/StrategiesPage";
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
 import PhysCustomersPage from "./pages/PhysCustomersPage/PhysCustomersPage.tsx";
@@ -19,7 +19,7 @@ function App() {
       <Header />
       <WelcomePage />
       <PartnersPage />
-      <QualificationPage />
+      <TeamPage />
       <img
         src="images/backgrounds/dark_background-flipped.png"
         alt=""

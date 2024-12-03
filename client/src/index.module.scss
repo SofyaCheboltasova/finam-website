@@ -13,7 +13,7 @@
 :root {
 	color-scheme: light dark;
 	color: $color-secondary;
-	background-color: $color-main2;
+	background-color: $color-main;
 }
 
 body {
@@ -54,6 +54,7 @@ a,
 li {
 	font: $font-small;
 	line-height: 1.3;
+	white-space: pre-wrap;
 }
 
 a {

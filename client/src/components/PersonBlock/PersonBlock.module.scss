@@ -1,0 +1,52 @@
+@import '../../styles/consts.scss';
+@import '../../styles/mixins.scss';
+
+.block {
+  @include flex(column, 3rem, unset, center);
+  width: 30rem;
+  padding: 2rem;
+  border-radius: $border-radius;
+
+  color: $color-main;
+  background-color: $color-secondary;
+
+  background-image: url(/public/images/backgrounds/light_background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(0.99)
+  }
+}
+
+.img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.content {
+  @include flex(column, 2rem, space-between, center);
+  * {
+    text-align: center;
+  }
+}
+
+.header__name {
+  font-weight: 400;
+}
+
+.header__position {
+  color: $color-main2;
+}
+
+.content__text {
+  color: #616067;
+  font-weight: 300;
+  font-size: 1.35rem;
+}

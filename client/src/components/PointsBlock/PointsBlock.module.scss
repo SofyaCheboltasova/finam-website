@@ -3,9 +3,10 @@
 
 .block {
   @include flex(column, 6rem, space-between);
-  padding: 5rem ;
+  padding: 3rem ;
 
   margin: 0 auto;
+  margin-bottom: 2rem;
 
   color: $color-main;
   background-color: $color-secondary2;
@@ -48,7 +49,6 @@
 
 .link {
   display: block;
-  margin-top: 1rem;
   width: fit-content;
   color: $color-highlight;
   font-size: 90%;
