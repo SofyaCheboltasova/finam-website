@@ -1,4 +1,4 @@
-import { strategyType } from "../../assets/data/strategiesData";
+import { strategyType } from "../../assets/data/customersData.ts";
 import style from "./StrategyBlock.module.scss";
 import {InfoBlock} from "../InfoBlock/InfoBlock.tsx";
 

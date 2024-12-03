@@ -31,23 +31,29 @@
 }
 
 .point {
-  //width: 50%;
-  //padding-left: 35px;
   @include flex(column, 1rem);
   text-align: left;
 }
 
-//.point:nth-child(2n) {
-//  align-self: end;
-//}
-
-//.point::before {
-//    content: "—";
-//    color: $color-main2;
-//    position: absolute;
-//    left: 0;
-//}
-
 .description {
   color: $color-main2;
+}
+
+.footnote {
+  color: $color-footprint;
+  font-family: Merriweather, sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.link {
+  display: block;
+  margin-top: 1rem;
+  width: fit-content;
+  color: $color-highlight;
+  font-size: 90%;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

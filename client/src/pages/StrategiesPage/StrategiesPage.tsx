@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { strategies } from "../../assets/data/strategiesData";
+import {strategies} from "../../assets/data/customersData.ts";
 import Button from "../../components/Button/Button";
 import Page from "../../components/Page/Page";
 import { StrategyBlock } from "../../components/StrategyBlock/StrategyBlock";
 import style from "./StrategiesPage.module.scss";
 
 export default function StrategiesPage() {
-  const header = "ФИЗИЧЕСКИМ ЛИЦАМ";
+  const header = "ГОТОВЫЕ СТРАТЕГИИ";
   const subheader = "Получайте высокую доходность с проверенными стратегиями автоследования";
   const risks = new Map<number, string>();
   risks.set(1, "Консервативный");

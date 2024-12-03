@@ -35,7 +35,7 @@ export default function QualificationPage() {
           />
         </div>
 
-        {getCarousel()}
+        {/*{getCarousel()}*/}
       </div>
     </Page>
   );

@@ -2,17 +2,13 @@
 @import "../../styles/mixins.scss";
 
 .block {
-  @include flex(column, 3rem);
+  @include flex(column, 2rem);
   color: $color-secondary;
-  background: linear-gradient(120deg, #060606, #2d2d308a);
+  //background: linear-gradient(120deg, #060606, #2d2d308a);
   border-radius: $border-radius;
+  border: 0.2px solid $color-secondary2;
   width: 100%;
-  padding: 3rem 5rem 5rem;
-}
-
-.block__header {
-  @include flex(column, 2rem, center);
-  height: 10%;
+  padding: 4rem;
 }
 
 .logo {

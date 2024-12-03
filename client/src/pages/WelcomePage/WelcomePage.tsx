@@ -1,6 +1,6 @@
 import Button from "../../components/Button/Button";
 import style from "./WelcomePage.module.scss";
-import { id } from "../../assets/data/strategiesData";
+import { id } from "../../assets/data/customersData.ts";
 
 export default function WelcomePage() {
   return (
@@ -8,10 +8,11 @@ export default function WelcomePage() {
       <div className={style.content}>
         <div className={style.content__text}>
           <h1>РАЦИОНАЛЬНЫЙ ПОДХОД К ИНВЕСТИЦИЯМ</h1>
-          <p>
-            Мы посвятили 20 лет рынку ценных бумаг,
-            <br />
-            чтобы делиться опытом с вами
+          <p className={style.text__description}>
+            «Цитадель-Инвест» — официальный представитель <br/>«ФИНАМ Инвестиции» в республике Хакасия
+            <br/>
+            <br/>
+            Более 1000 клиентов за 12 лет работы
           </p>
         </div>
         <div className={style.content__buttons}>

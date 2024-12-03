@@ -1,11 +1,12 @@
 import style from "./App.module.scss";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
-import { CasesPage } from "./pages/CasesPage/CasesPage";
+import { UrCustomersPage } from "./pages/UrCustomersPage/UrCustomersPage.tsx";
 import PartnersPage from "./pages/PartnersPage/PartnersPage";
 import QualificationPage from "./pages/QualificationPage/QualificationPage";
 import StrategiesPage from "./pages/StrategiesPage/StrategiesPage";
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
+import PhysCustomersPage from "./pages/PhysCustomersPage/PhysCustomersPage.tsx";
 
 function App() {
   return (
@@ -24,10 +25,9 @@ function App() {
         alt=""
         className={style.app__img_flipped}
       />
-      {/*<CasesPage />*/}
+      <PhysCustomersPage/>
       <StrategiesPage />
-        <CasesPage />
-      {/* <Form/> */}
+      <UrCustomersPage />
       <Footer />
     </div>
   );
