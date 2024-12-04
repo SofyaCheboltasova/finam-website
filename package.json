@@ -7,9 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "lint": "npx eslint src test",
+    "lint": "npx eslint client/src test",
     "lint:fix": "npm run lint -- --fix",
-    "prettier": "npx prettier src test --check",
+    "prettier": "npx prettier client/src test --check",
     "prettier:fix": "npm run prettier -- --write",
     "format": "npm run prettier:fix && npm run lint:fix"
   },
