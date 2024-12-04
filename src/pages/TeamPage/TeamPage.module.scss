@@ -16,13 +16,11 @@
 	border-left: none;
 	border-radius: $border-radius;
 	padding: 2rem;
+	position: relative;
 
 	* {
 		font-weight: 200;
 	}
-
-	position: relative;
-
 	p {
 		margin-left: 35px;
 	}
