@@ -4,7 +4,7 @@ interface ButtonProps {
   text: string;
   href?: string;
   filled?: boolean;
-  onClick?: () => void;
+  onClick?: (e: never) => void;
 }
 
 export default function Button(props: ButtonProps) {

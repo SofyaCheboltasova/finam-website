@@ -2,12 +2,18 @@ import style from "./PointsBlock.module.scss";
 import Button from "../Button/Button.tsx";
 import {IPoints} from "../../assets/data/customersData.ts";
 
+export interface IFormState {
+    isFormOpened: boolean,
+    setIsFormOpened: (isFormOpened: boolean) => void,
+}
+
 interface PointsBlockProps {
     points: IPoints[],
     link: string,
+    form: IFormState
 }
 
-export function PointsBlock({points, link}: PointsBlockProps) {
+export function PointsBlock({points, form}: PointsBlockProps) {
     return (
         <div className={style.block}>
             <div className={style.points}>
@@ -23,7 +29,7 @@ export function PointsBlock({points, link}: PointsBlockProps) {
                     )
                 })}
             </div>
-            <Button text={"Получить консультацию"} href={link}></Button>
+            <Button text={"Получить консультацию"} onClick={() => form.setIsFormOpened(true)}></Button>
         </div>
     );
 }

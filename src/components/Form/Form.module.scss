@@ -1,0 +1,72 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/consts.scss';
+
+.background {
+  width: 100%;
+  height: 100%;
+  @include flex($justify-content: center, $align-items: center);
+
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* затемнение заднего фона */
+  z-index: 1000;
+}
+
+.form__wrapper {
+  @include flex(column, 2rem, space-between);
+  padding: 3rem ;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: $color-main;
+  background-color: $color-secondary2;
+  border-radius: $border-radius;
+  z-index: 1001;
+
+  h4 {
+    font-weight: 400;
+  }
+}
+
+.socials {
+  @include flex(row, 1rem, space-between);
+  margin-bottom: 3rem;
+}
+
+
+.inputs {
+  @include flex(column, 2rem, space-between);
+}
+
+.input {
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  border: 0.5px solid $color-main2;
+  border-radius: 5px;
+  padding: 1rem;
+  line-height: 1.5;
+  color: $color-main;
+  font: $font-small;
+
+  &:focus {
+    outline: 1px solid $color-main2;
+  }
+}
+
+.error {
+  outline: 1px solid red;
+}
+
+.error_text {
+  font-size: 1rem;
+  color: red;
+  margin-top: -10px;
+}

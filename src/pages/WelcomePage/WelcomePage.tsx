@@ -1,8 +1,9 @@
 import Button from "../../components/Button/Button";
 import style from "./WelcomePage.module.scss";
 import { id } from "../../assets/data/customersData.ts";
+import {IFormState} from "../../components/PointsBlock/PointsBlock.tsx";
 
-export default function WelcomePage() {
+export default function WelcomePage(props: IFormState) {
   return (
     <section className={style.page} id="/">
       <div className={style.content}>
@@ -20,6 +21,10 @@ export default function WelcomePage() {
             text={"Открыть счет онлайн"}
             filled
             href={`https://www.finam.ru/landing/otkrytie-scheta-new/${id}`}
+          />
+          <Button
+              text={"Получить консультацию"}
+              onClick={() => props.setIsFormOpened(true)}
           />
         </div>
       </div>

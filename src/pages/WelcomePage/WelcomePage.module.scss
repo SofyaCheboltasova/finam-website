@@ -28,8 +28,8 @@
 
 .content__buttons {
 	display: flex;
-	justify-content: space-between;
-	gap: 10rem
+	flex-direction: column;
+	gap: 2rem
 }
 
 .image {

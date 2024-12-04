@@ -7,8 +7,12 @@ import TeamPage from "./pages/TeamPage/TeamPage.tsx";
 import StrategiesPage from "./pages/StrategiesPage/StrategiesPage";
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
 import PhysCustomersPage from "./pages/PhysCustomersPage/PhysCustomersPage.tsx";
+import {useState} from "react";
+import {Form} from "./components/Form/Form.tsx";
 
 function App() {
+    const [isFormOpened, setIsFormOpened] = useState(false);
+
   return (
     <div className={style.app}>
       <img
@@ -17,7 +21,7 @@ function App() {
         className={style.app__img}
       />
       <Header />
-      <WelcomePage />
+      <WelcomePage isFormOpened={isFormOpened} setIsFormOpened={setIsFormOpened}/>
       <PartnersPage />
       <TeamPage />
       <img
@@ -25,10 +29,11 @@ function App() {
         alt=""
         className={style.app__img_flipped}
       />
-      <PhysCustomersPage/>
+      <PhysCustomersPage isFormOpened={isFormOpened} setIsFormOpened={setIsFormOpened}/>
       <StrategiesPage />
-      <UrCustomersPage />
+      <UrCustomersPage isFormOpened={isFormOpened} setIsFormOpened={setIsFormOpened}/>
       <Footer />
+      {isFormOpened && <Form setIsFormOpened={setIsFormOpened}/>}
     </div>
   );
 }
