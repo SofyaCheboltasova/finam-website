@@ -10,10 +10,7 @@ export default function WelcomePage(props: IFormState) {
         <div className={style.content__text}>
           <h1>РАЦИОНАЛЬНЫЙ ПОДХОД К ИНВЕСТИЦИЯМ</h1>
           <p className={style.text__description}>
-            «Цитадель-Инвест» — официальный представитель <br/>«ФИНАМ Инвестиции» в республике Хакасия
-            <br/>
-            <br/>
-            Более 1000 клиентов за 12 лет работы
+            <span className={style.text__bold}>«Цитадель-Инвест»</span> — официальный представитель «ФИНАМ Инвестиции» в республике Хакасия
           </p>
         </div>
         <div className={style.content__buttons}>

@@ -54,10 +54,16 @@
 		display: none;
 	}
 
+	.header_nav a {
+		font: 1.6rem "Inter", sans-serif;
+		font-weight: 300;
+		color: $color-secondary2;
+	}
+
 	.header_nav.open {
 		opacity: 1;
 		display: flex;
-		height: 100dvh;
+		height: 100lvh;
 	}
 
 	.burger {
