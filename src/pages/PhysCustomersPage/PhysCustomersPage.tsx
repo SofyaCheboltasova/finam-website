@@ -4,7 +4,7 @@ import {IFormState, PointsBlock} from "../../components/PointsBlock/PointsBlock.
 
 export default function PhysCustomersPage(props: IFormState) {
     const header = "ФИЗИЧЕСКИМ ЛИЦАМ";
-    const subheader = 'Готовые инвестиционные стратегии, доступ на биржи РФ, США и Гонконга'
+    const subheader = 'Готовые инвестиционные стратегии, доступ на биржи России и США'
 
     return (
         <Page id="products" color={"white"} header={header} subheader={subheader}>

@@ -1,5 +1,5 @@
 import style from "./Form.module.scss";
-import {useRef, useState} from "react";
+import {ChangeEvent, useEffect, useRef, useState} from "react";
 import Button from "../Button/Button.tsx";
 
 interface FormProps {
@@ -10,7 +10,23 @@ export function Form(props: FormProps) {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [tel, setTel] = useState("");
-    const [isSent, setIsSent] = useState<boolean | null>(null);
+    const [sendError, setSendError] = useState<string | null>(null);
+    const [sendMessage, setSendMessage] = useState<string | null>(null);
+
+    useEffect(() => {
+        if(name !== '')
+            validateName();
+    }, [name]);
+
+    useEffect(() => {
+        if(tel !== '')
+            validateTel();
+    }, [tel]);
+
+    useEffect(() => {
+        if(email !== '')
+            validateEmail();
+    }, [email]);
 
     const [errors, setErrors] = useState({
         name: false,
@@ -39,6 +55,8 @@ export function Form(props: FormProps) {
             parse_mode: 'HTML'
         };
 
+
+        setSendMessage('Отправляем...');
         const response = await fetch(url, {
             method: 'POST',
             headers: {
@@ -49,18 +67,14 @@ export function Form(props: FormProps) {
 
         if(response.ok) {
             await response.json();
-            setIsSent(true);
+            setSendMessage('Скоро с вами свяжется наш специалист!');
         }
         else {
-            setIsSent(false)
+            setSendError('Ошибка! Повторите попытку')
         }
     }
 
-    function validate() {
-        setIsSent(null);
-        const telRegExp = new RegExp(`^\\+7\\s?\\(?\\d{3}\\)?\\s?\\d{3}[-.\\s]?\\d{2}[-.\\s]?\\d{2}$|^8\\s?\\d{3}\\s?\\d{3}[-.\\s]?\\d{2}[-.\\s]?\\d{2}$`)
-        const emailRegExp = new RegExp(`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$`)
-
+    function validateName() {
         if (name === "" && ref.current.name) {
             ref.current.name.classList.add(style.error);
             setErrors((prev) => ({ ...prev, name: true }));
@@ -68,14 +82,10 @@ export function Form(props: FormProps) {
             setErrors((prev) => ({ ...prev, name: false }));
             ref.current.name.classList.remove(style.error);
         }
+    }
 
-        if ((tel === "" || !telRegExp.test(tel)) && ref.current.tel) {
-            ref.current.tel.classList.add(style.error);
-            setErrors((prev) => ({ ...prev, tel: true }));
-        } else if (ref.current.tel) {
-            setErrors((prev) => ({ ...prev, tel: false }));
-            ref.current.tel.classList.remove(style.error);
-        }
+    function validateEmail() {
+        const emailRegExp = new RegExp(`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$`)
 
         if ((email === "" || !emailRegExp.test(email)) && ref.current.email) {
             ref.current.email.classList.add(style.error);
@@ -84,6 +94,27 @@ export function Form(props: FormProps) {
             setErrors((prev) => ({ ...prev, email: false }));
             ref.current.email.classList.remove(style.error);
         }
+    }
+
+    function validateTel() {
+        const telRegExp = new RegExp(`^\\+7\\s?\\(?\\d{3}\\)?\\s?\\d{3}[-.\\s]?\\d{2}[-.\\s]?\\d{2}$|^8\\s?\\d{3}\\s?\\d{3}[-.\\s]?\\d{2}[-.\\s]?\\d{2}$`)
+
+        if ((tel === "" || !telRegExp.test(tel)) && ref.current.tel) {
+            ref.current.tel.classList.add(style.error);
+            setErrors((prev) => ({ ...prev, tel: true }));
+        } else if (ref.current.tel) {
+            setErrors((prev) => ({ ...prev, tel: false }));
+            ref.current.tel.classList.remove(style.error);
+        }
+    }
+
+    function validate() {
+        setSendError(null);
+        setSendMessage(null);
+
+        validateName()
+        validateTel()
+        validateEmail()
     }
 
     async function onSubmit() {
@@ -114,8 +145,7 @@ export function Form(props: FormProps) {
                         className={style.input}
                         required
                         value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        onBlur={validate}
+                        onInput={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
                     />
                     {errors.name && <span className={style.error_text}>Введите корректные данные</span>}
                     <input
@@ -126,8 +156,7 @@ export function Form(props: FormProps) {
                         className={style.input}
                         required
                         value={tel}
-                        onChange={(e) => setTel(e.target.value)}
-                        onBlur={validate}
+                        onInput={(e: ChangeEvent<HTMLInputElement>) => setTel(e.target.value) }
                     />
                     {errors.tel && <span className={style.error_text}>Формат: +7 (XXX) XXX-XX-XX или 8XXXXXXXXXX</span>}
                     <input
@@ -136,15 +165,14 @@ export function Form(props: FormProps) {
                         name="email"
                         value={email}
                         placeholder={'user@example.com'}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onInput={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                         className={style.input}
-                        onBlur={validate}
                     />
                     {errors.email && <span className={style.error_text}>Формат: user@example.com</span>}
                 </div>
 
-                {isSent && <span className={style.sent_ok}>Скоро с вами свяжется наш специалист!</span>}
-                {isSent === false && <span className={style.error_text}>Ошибка! Повторите попытку</span>}
+                {sendMessage && <span className={style.sent_ok}>{sendMessage}</span>}
+                {sendError && <span className={style.error_text}>{sendError}</span>}
                 <Button text={'Отправить'} onClick={onSubmit}/>
             </form>
         </>

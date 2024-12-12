@@ -12,7 +12,7 @@ export default function PartnersPage() {
       <div className={style.partners}>
         <ul className={style.description}>
           {companies.map((company) => {
-            return <CompanyBlock data={company} />;
+            return <CompanyBlock key={company.id} data={company} />;
           })}
         </ul>
       </div>

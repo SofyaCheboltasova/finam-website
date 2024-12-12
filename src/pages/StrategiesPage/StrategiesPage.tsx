@@ -23,7 +23,7 @@ export default function StrategiesPage() {
           {[...risks.entries()].map(([id, name]) => (
             <Button
               text={name}
-              key={id}
+              key={`risk${id}`}
               filled={riskSelected === id}
               onClick={() => setRiskSelected(id)}
             />

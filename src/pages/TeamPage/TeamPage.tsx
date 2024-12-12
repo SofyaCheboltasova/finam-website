@@ -13,12 +13,8 @@ export default function TeamPage() {
       <div className={style.teamPage}>
         <div className={style.team}>
             {teamData.map(member =>
-                <PersonBlock img={member.img} name={member.name} position={member.position} description={member.description}/>
+                <PersonBlock key={member.name} img={member.img} name={member.name} position={member.position} description={member.description}/>
             )}
-
-            {/*<div className={style.team__info}>*/}
-            {/*    <p>Участие во всероссийских конференциях</p>*/}
-            {/*</div>*/}
         </div>
       </div>
     </Page>

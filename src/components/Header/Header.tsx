@@ -1,16 +1,24 @@
 import style from "./Header.module.scss";
 import { useAnchorScroll } from "../../hooks/useAnchorScroll";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 
 export function Header() {
   useAnchorScroll();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen((prev) => !prev);
-  };
+    useEffect(() => {
+      if (window.innerWidth <= 860 ) {
+        document.body.style.overflowY = menuOpen ? 'hidden' : 'auto';
+      }
+    }, [menuOpen]);
 
-  return (
+    const toggleMenu = () => {
+      if (window.innerWidth <= 860) {
+        setMenuOpen((prev) => !prev);
+      }
+    };
+
+    return (
     <header className={style.header}>
       <div className={style.header_top}>
         <img src="/images/logos/citadel_logo.svg" alt="Logo" />
@@ -23,7 +31,7 @@ export function Header() {
       </div>
 
       <nav
-        className={`${style.header_nav} ${menuOpen ? style.open : ""}`}
+        className={`${style.header_nav} ${menuOpen && style.open}`}
         onClick={toggleMenu}
       >
         <a href="#partners">Партнеры</a>

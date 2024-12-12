@@ -1,22 +1,15 @@
 @import '../../styles/mixins.scss';
 @import '../../styles/consts.scss';
 
-.header_top {
-	@include flex(row, 4rem, space-between, center);
-	position: relative;
-	top: 0;
-
-	background-color: $color-main;
-	z-index: 100;
-
-	margin: 0 auto;
-	max-width: 1300px;
-	width: 100%;
-}
-
 .header {
 	@include flex(row, 2rem, space-around, center);
 	padding: 20px 20px 0;
+	width: 100%;
+	background-color: $color-main;
+	height: fit-content;
+}
+
+.header_top {
 	width: 100%;
 }
 
@@ -28,30 +21,39 @@
 	a {
 		font-weight: lighter;
 		font-size: $font-small;
-		transition: color 0.2s ease
-	}
+		transition: color 0.2s ease;
 
-	a:hover {
-		color: $color-transparent;
+		&:hover {
+			color: $color-transparent;
+		}
 	}
 }
 
 @media (max-width: 860px) {
+	.header_top {
+		z-index: 100;
+		@include flex(row, 4rem, space-between, center);
+	}
+
 	.header {
 		padding: 20px 0 0;
 	}
 
 	.header_nav {
 		@include flex(column, 3rem, flex-start, center);
-		position: absolute;
-		top: 100%;
+		height: 100lvh;
+		width: 100vw;
+		position: fixed;
+		top: 0;
 		left: 0;
-		width: 100%;
-		padding: 3rem;
-		transition: display 0.8s ease-in-out;
+		z-index: 10;
+		padding: 13rem 3rem 0 ;
 		background: $color-main;
-		opacity: 0;
 		display: none;
+
+		&.open {
+			display: flex;
+		}
 	}
 
 	.header_nav a {
@@ -60,11 +62,6 @@
 		color: $color-secondary2;
 	}
 
-	.header_nav.open {
-		opacity: 1;
-		display: flex;
-		height: 100lvh;
-	}
 
 	.burger {
 		@include flex(column, $justify-content: space-between);
@@ -93,25 +90,4 @@
 		transform: rotate(-45deg) translateY(-15px);
 	}
 
-}
-
-
-@media only screen and (max-width: 640px) {
-	.header {
-		width: 100%;
-	}
-
-	.header_top {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-	.header_nav {
-		position: fixed;
-		top: 0;
-		left: 0;
-
-		padding-top: 13rem;
-		z-index: 10;
-	}
 }

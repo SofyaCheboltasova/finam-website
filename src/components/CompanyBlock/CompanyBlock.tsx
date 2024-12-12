@@ -1,7 +1,7 @@
 import style from "./CompanyBlock.module.scss";
 
 interface CompanyData {
-  id: number;
+  id: string;
   points: string[];
   logo?: string;
 }
@@ -14,7 +14,7 @@ export function CompanyBlock({ data }: CompanyBlockProps) {
   const { id, logo, points } = data;
 
   return (
-    <article className={`${style.block} ${style.floating}`}>
+    <article key={id} className={`${style.block} ${style.floating}`}>
       <div className={style.block__header}>
         <img src={logo} alt="Logo" className={style.logo} />
         {/* <div className={style.subheader}>{description}</div> */}
@@ -23,7 +23,7 @@ export function CompanyBlock({ data }: CompanyBlockProps) {
       <ul className={style.list}>
         {points.map((point) => {
           return (
-            <li key={id} className={style.item}>
+            <li key={'li' + id} className={style.item}>
               {point}
             </li>
           );

@@ -25,21 +25,21 @@ export function Footer() {
           </ul>
 
           <ul className={style.contacts__info}>
-            <li className={style.social}>
+            <li className={style.social} key={'location'}>
               <img src="images/contacts/location.png" alt="" />
               <span>г Абакан, ул Колхозная, д 34, 109Н офис; 2 этаж</span>
             </li>
 
-            <li className={style.social}>
+            <li className={style.social} key={'clocks'}>
               <img src="images/contacts/clocks.png" alt="" />
               <span>пн-пт с 10-00 до 19-00</span>
             </li>
 
-            <li className={`${style.social} ${style.lightText}`}>
+            <li className={`${style.social} ${style.lightText}`} key={'address'}>
               Юридический адрес: Россия, 655017, Хакасия Респ, г Абакан, ул
               Колхозная, д.34, оф.109Н
             </li>
-            <li className={`${style.social} ${style.lightText}`}>
+            <li className={`${style.social} ${style.lightText}`} key={'inn'}>
               ИНН: 1901107696
             </li>
           </ul>
@@ -51,12 +51,12 @@ export function Footer() {
             className={style.geo__map}
           ></iframe>
           <ul className={style.geo__links}>
-            <li>
+            <li key={'2gis'}>
               <a href="https://go.2gis.com/bslbl2" target="_blanc">
                 Открыть в 2ГИС
               </a>
             </li>
-            <li>
+            <li key={'yandex'}>
               <a href="https://yandex.ru/maps/-/CDX1fRmF" target="_blanc">
                 Открыть в Яндекс Картах
               </a>

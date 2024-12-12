@@ -1,24 +1,24 @@
 export const contacts = [
   {
-    id: 1,
+    id: 'telegram',
     logo: "/images/contacts/tg.png",
     href: "https://t.me/+79134489089",
     name: "Telegram",
   },
   {
-    id: 2,
+    id: 'whatsapp',
     logo: "/images/contacts/wa.png",
     href: "https://wa.me/79134489089",
     name: "WhatsApp",
   },
   {
-    id: 3,
+    id: 'tel',
     logo: "/images/contacts/phone.png",
     href: "tel:79134489089",
     name: "+7 (913) 44-89089",
   },
   {
-    id: 4,
+    id: 'email',
     logo: "/images/contacts/mail.png",
     href: "mailto:kcheboltasov@reg.finam.ru",
     name: "kcheboltasov@reg.finam.ru",

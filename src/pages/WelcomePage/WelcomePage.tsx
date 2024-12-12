@@ -4,13 +4,15 @@ import { id } from "../../assets/data/customersData.ts";
 import {IFormState} from "../../components/PointsBlock/PointsBlock.tsx";
 
 export default function WelcomePage(props: IFormState) {
+  const header = '«Цитадель-Инвест»';
+  const desc = '— официальный представитель\nГК «Финам» в г. Абакан';
   return (
     <section className={style.page} id="/">
       <div className={style.content}>
         <div className={style.content__text}>
           <h1>РАЦИОНАЛЬНЫЙ ПОДХОД К ИНВЕСТИЦИЯМ</h1>
           <p className={style.text__description}>
-            <span className={style.text__bold}>«Цитадель-Инвест»</span> — официальный представитель «ФИНАМ Инвестиции» в республике Хакасия
+            <span className={style.text__bold}>{header}</span> {desc}
           </p>
         </div>
         <div className={style.content__buttons}>
